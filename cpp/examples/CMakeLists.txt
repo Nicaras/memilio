@@ -21,6 +21,9 @@ target_compile_options(ode_seir_example PRIVATE ${MEMILIO_CXX_FLAGS_ENABLE_WARNI
 add_executable(ode_sir_example ode_sir.cpp)
 target_link_libraries(ode_sir_example PRIVATE memilio ode_sir)
 
+add_executable(ode_sis_example ode_sis.cpp)
+target_link_libraries(ode_sis_example PRIVATE memilio ode_sis)
+
 
 add_executable(seir_flows_example ode_seir_flows.cpp)
 target_link_libraries(seir_flows_example PRIVATE memilio ode_seir)
@@ -99,3 +102,4 @@ if(MEMILIO_HAS_HDF5)
   target_link_libraries(ode_secir_save_results_example PRIVATE memilio ode_secir)
   target_compile_options(ode_secir_save_results_example PRIVATE ${MEMILIO_CXX_FLAGS_ENABLE_WARNING_ERRORS})
 endif()
+
